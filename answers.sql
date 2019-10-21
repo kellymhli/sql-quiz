@@ -225,3 +225,60 @@ Write a query that shows the average order cost.
 
 
 SELECT AVG(order_total) FROM orders;
+
+
+==========
+18
+
+-----
+
+Write a query that shows the order total that was lowest in price.
+
+-----
+
+
+SELECT MIN(order_total) FROM orders;
+
+
+==========
+19
+
+-----
+
+Write a query that fetches the id of the customer whose email is
+'pclark74@gmail.com'.
+
+-----
+
+
+SELECT id FROM customers WHERE email='pclark74@gmail.com';
+
+
+==========
+20
+
+-----
+
+Write a query that shows the id, status and order_total for all orders 
+made by customer 100.
+
+-----
+
+
+SELECT id, status, order_total FROM orders WHERE customer_id=100;
+
+
+==========
+21
+
+-----
+
+Write a single query that shows the id, status, and order total for all
+orders made by 'pclark74@gmail.com'. Use a subselect to do this.
+
+
+-----
+
+
+SELECT id, status, order_total FROM orders WHERE customer_id = 
+(SELECT id FROM customers WHERE email = 'pclark74@gmail.com');
